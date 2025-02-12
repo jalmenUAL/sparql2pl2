@@ -79,10 +79,7 @@ import de.f0rce.ace.enums.AceTheme;
  * tab/window.
  */
 
-@Route
-@PWA(name = "Vaadin Application", shortName = "Vaadin App", description = "This is an example Vaadin application.", enableInstallPrompt = false)
-@CssImport("./styles/shared-styles.css")
-@CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
+@Route("sparql2pl")
 public class MainView extends VerticalLayout {
 	
 	
