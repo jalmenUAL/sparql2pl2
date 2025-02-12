@@ -1,8 +1,10 @@
 package SPARQL2PL;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -100,7 +102,12 @@ public class MainView extends VerticalLayout {
 	AceEditor editorO = new AceEditor();
 	Boolean fuzzy = false;
 	String service = "";
+	private static final String FILE_NAME = "model.rdf";
+	private static final String DIRECTORY = "data"; // Directorio donde se guardará el archivo
+	
+	private Path path;
 
+	
 	public static String readStringFromURL(String requestURL) throws IOException {
 		try (Scanner scanner = new Scanner(new URL(requestURL).openStream(), StandardCharsets.UTF_8.toString())) {
 			scanner.useDelimiter("\\A");
@@ -147,7 +154,31 @@ public class MainView extends VerticalLayout {
 	public MainView() {
 		
 		 
+		Path directoryPath = Paths.get(System.getProperty("user.dir"), DIRECTORY);
+        File directory = new File(directoryPath.toString());
+        if (!directory.exists()) {
+            directory.mkdirs(); // Crear el directorio si no existe
+        }
+        
+        path = directoryPath.resolve(FILE_NAME);
+        File file2 = new File(path.toString());
+        
+        // Escribir contenido RDF en el archivo
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file2))) {
+            writer.write("<?xml version=\"1.0\"?>\n");
+            writer.write("<rdf:RDF\n");
+            writer.write("    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n");
+            writer.write("    xmlns:ex=\"http://example.org/#\">\n");
+            writer.write("    <rdf:Description rdf:about=\"http://example.org/item1\">\n");
+            writer.write("        <ex:name>Ejemplo</ex:name>\n");
+            writer.write("    </rdf:Description>\n");
+            writer.write("</rdf:RDF>\n");
+        } catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 
+		
 
 		VaadinSession.getCurrent().setErrorHandler(new CustomErrorHandler());
 
@@ -754,12 +785,13 @@ public class MainView extends VerticalLayout {
 				System.out.print((q21bb.hasSolution() ? "" : ""));
 				q21bb.close();
 
-				String t21c = " working_directory(_,\"C:/\")";
+				/*String t21c = " working_directory(_,\"C:/\")";
 				org.jpl7.Query q21c = new org.jpl7.Query(t21c);
 				System.out.print((q21c.hasSolution() ? "" : ""));
-				q21c.close();
+				q21c.close();*/
 
-				String t2 = "rdf_load('" + "C:/tmp-sparql/model.rdf" + "')";
+				String t2 = "rdf_load('" + path.toAbsolutePath().toString().replace("\\", "/") + "')";
+				System.out.print(t2);
 				org.jpl7.Query q2 = new org.jpl7.Query(t2);
 				System.out.print((q2.hasSolution() ? "" : ""));
 				q2.close();
@@ -901,11 +933,10 @@ public class MainView extends VerticalLayout {
 		} catch (Exception e) {
 			show_notification("Format Error", "The dataset is not in RDF/XML format");
 		}
-		File theDir = new File("tmp-sparql");
-		if (!theDir.exists()) {
-			theDir.mkdir();
-		}
-		String fileName = "C:/tmp-sparql/" + "model.rdf";
+		 
+		 
+		
+		String fileName = path.toString();
 		File f = new File(fileName);
 		FileOutputStream file;
 		try {
@@ -929,11 +960,11 @@ public class MainView extends VerticalLayout {
 		} catch (Exception e) {
 			show_notification("Format Error", "The dataset is not in RDF/Turtle format");
 		}
-		File theDir = new File("tmp-sparql");
+		/*File theDir = new File("tmp-sparql");
 		if (!theDir.exists()) {
 			theDir.mkdir();
-		}
-		String fileName = "C:/tmp-sparql/" + "model.rdf";
+		}*/
+		String fileName = path.toString();
 		File f = new File(fileName);
 		FileOutputStream file;
 		try {
@@ -1053,7 +1084,7 @@ public class MainView extends VerticalLayout {
 		ldataset.add(dataset);
 		editor.setCustomAutocompletion(l);
 
-		String fileName = "C:/tmp-sparql/" + "model.rdf";
+		String fileName = path.toString();
 		File f = new File(fileName);
 		FileOutputStream file;
 		try {
@@ -1069,7 +1100,7 @@ public class MainView extends VerticalLayout {
 		}
 
 		String content = "";
-		String file2 = "C:/tmp-sparql/" + "model.rdf";
+		String file2 = path.toString();
 		Path path = Paths.get(file2);
 
 		try {
@@ -1171,11 +1202,11 @@ public class MainView extends VerticalLayout {
 			e1.printStackTrace();
 
 		}
-		File theDir = new File("tmp-sparql");
+		/*File theDir = new File("tmp-sparql");
 		if (!theDir.exists()) {
 			theDir.mkdir();
-		}
-		String fileName = "C:/tmp-sparql/" + "model.rdf";
+		}*/
+		String fileName = path.toString();
 		File f = new File(fileName);
 		FileOutputStream file;
 		try {

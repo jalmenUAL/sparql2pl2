@@ -1,0 +1,559 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.semanticweb.org/food#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/food"/>
+  <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">
+    <rdf:type>
+      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:type>
+    <rdf:type>
+      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:type>
+  </rdfs:Datatype>
+  <rdfs:Class rdf:about="http://www.semanticweb.org/food#ingredient">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/food#ingredient"/>
+    <rdf:type>
+      <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#Class">
+        <rdf:type>
+          <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        </rdf:type>
+      </rdfs:Resource>
+    </rdf:type>
+    <rdf:type>
+      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:type>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.semanticweb.org/food#procedure">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/food#procedure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type>
+      <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:type>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.semanticweb.org/food#menu">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/food#menu"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.semanticweb.org/food#food">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/food#food"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.semanticweb.org/food#condiment">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/food#condiment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/2001/XMLSchema#integer">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/food#cooked">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/food#procedure"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/food#food"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/food#made_from">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/food#ingredient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/food#food"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/food#food"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/food#dish">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/food#food"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/food#menu"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/food#season">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/food#condiment"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/food#food"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate">
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#object">
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#object"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest">
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#first">
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#first"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/food#price"/>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/food#time">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/food#food"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <menu rdf:about="http://www.semanticweb.org/food#chicken_menu">
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >200</price>
+    <dish>
+      <food rdf:about="http://www.semanticweb.org/food#soup">
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >35</time>
+        <season>
+          <condiment rdf:about="http://www.semanticweb.org/food#pepper">
+            <rdf:type>
+              <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#NamedIndividual">
+                <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+              </rdfs:Resource>
+            </rdf:type>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          </condiment>
+        </season>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#pumpkin">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <season>
+          <condiment rdf:about="http://www.semanticweb.org/food#salt">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          </condiment>
+        </season>
+        <cooked>
+          <procedure rdf:about="http://www.semanticweb.org/food#stew">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          </procedure>
+        </cooked>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#water">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#onion">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#garlic">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      </food>
+    </dish>
+    <dish>
+      <food rdf:about="http://www.semanticweb.org/food#roasted_chicken">
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >60</time>
+        <season rdf:resource="http://www.semanticweb.org/food#salt"/>
+        <made_from rdf:resource="http://www.semanticweb.org/food#garlic"/>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#chicken">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#butter">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <cooked>
+          <procedure rdf:about="http://www.semanticweb.org/food#roast">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          </procedure>
+        </cooked>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      </food>
+    </dish>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </menu>
+  <menu rdf:about="http://www.semanticweb.org/food#burger_menu">
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >100</price>
+    <dish>
+      <food rdf:about="http://www.semanticweb.org/food#salad">
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >15</time>
+        <season rdf:resource="http://www.semanticweb.org/food#salt"/>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#tomato">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <made_from rdf:resource="http://www.semanticweb.org/food#onion"/>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#oil">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#lettuce">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <cooked>
+          <procedure rdf:about="http://www.semanticweb.org/food#raw">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          </procedure>
+        </cooked>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      </food>
+    </dish>
+    <dish>
+      <food rdf:about="http://www.semanticweb.org/food#cake">
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#flour">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#egg">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#milk">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <made_from rdf:resource="http://www.semanticweb.org/food#butter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#fruit">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <cooked>
+          <procedure rdf:about="http://www.semanticweb.org/food#bake">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          </procedure>
+        </cooked>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >120</time>
+        <season>
+          <condiment rdf:about="http://www.semanticweb.org/food#sugar">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          </condiment>
+        </season>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      </food>
+    </dish>
+    <dish>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/food#burger">
+        <made_from>
+          <food rdf:about="http://www.semanticweb.org/food#cheese">
+            <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >60</time>
+            <season rdf:resource="http://www.semanticweb.org/food#salt"/>
+            <made_from rdf:resource="http://www.semanticweb.org/food#milk"/>
+            <cooked rdf:resource="http://www.semanticweb.org/food#raw"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#ingredient"/>
+          </food>
+        </made_from>
+        <season rdf:resource="http://www.semanticweb.org/food#salt"/>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >20</time>
+        <made_from rdf:resource="http://www.semanticweb.org/food#tomato"/>
+        <made_from>
+          <food rdf:about="http://www.semanticweb.org/food#bread">
+            <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >120</time>
+            <season rdf:resource="http://www.semanticweb.org/food#salt"/>
+            <made_from rdf:resource="http://www.semanticweb.org/food#water"/>
+            <made_from rdf:resource="http://www.semanticweb.org/food#flour"/>
+            <cooked rdf:resource="http://www.semanticweb.org/food#bake"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#ingredient"/>
+          </food>
+        </made_from>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#beef">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <made_from rdf:resource="http://www.semanticweb.org/food#oil"/>
+        <cooked>
+          <procedure rdf:about="http://www.semanticweb.org/food#grill">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          </procedure>
+        </cooked>
+        <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      </owl:NamedIndividual>
+    </dish>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </menu>
+  <menu rdf:about="http://www.semanticweb.org/food#soup_menu">
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >30</price>
+    <dish rdf:resource="http://www.semanticweb.org/food#soup"/>
+    <dish>
+      <food rdf:about="http://www.semanticweb.org/food#juice">
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >10</time>
+        <season rdf:resource="http://www.semanticweb.org/food#sugar"/>
+        <made_from rdf:resource="http://www.semanticweb.org/food#fruit"/>
+        <cooked rdf:resource="http://www.semanticweb.org/food#raw"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      </food>
+    </dish>
+    <dish rdf:resource="http://www.semanticweb.org/food#cake"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </menu>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#range">
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdfs:Resource>
+  <menu rdf:about="http://www.semanticweb.org/food#sandwich_menu">
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >50</price>
+    <dish>
+      <food rdf:about="http://www.semanticweb.org/food#sandwich">
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >15</time>
+        <made_from>
+          <ingredient rdf:about="http://www.semanticweb.org/food#ham">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+          </ingredient>
+        </made_from>
+        <made_from rdf:resource="http://www.semanticweb.org/food#cheese"/>
+        <made_from rdf:resource="http://www.semanticweb.org/food#butter"/>
+        <made_from rdf:resource="http://www.semanticweb.org/food#bread"/>
+        <cooked rdf:resource="http://www.semanticweb.org/food#grill"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      </food>
+    </dish>
+    <dish rdf:resource="http://www.semanticweb.org/food#juice"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </menu>
+  <menu rdf:about="http://www.semanticweb.org/food#vegan_menu">
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >200</price>
+    <dish rdf:resource="http://www.semanticweb.org/food#soup"/>
+    <dish rdf:resource="http://www.semanticweb.org/food#salad"/>
+    <dish rdf:resource="http://www.semanticweb.org/food#juice"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </menu>
+  <rdf:List rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:List>
+  <menu rdf:about="http://www.semanticweb.org/food#pizza_menu">
+    <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >80</price>
+    <dish>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/food#pizza">
+        <cooked rdf:resource="http://www.semanticweb.org/food#bake"/>
+        <made_from rdf:resource="http://www.semanticweb.org/food#tomato"/>
+        <made_from rdf:resource="http://www.semanticweb.org/food#bread"/>
+        <made_from rdf:resource="http://www.semanticweb.org/food#cheese"/>
+        <season>
+          <condiment rdf:about="http://www.semanticweb.org/food#oregano">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+            <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+          </condiment>
+        </season>
+        <made_from rdf:resource="http://www.semanticweb.org/food#onion"/>
+        <made_from rdf:resource="http://www.semanticweb.org/food#ham"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/food#food"/>
+        <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >45</time>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      </owl:NamedIndividual>
+    </dish>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </menu>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#domain">
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdfs:Resource>
+  <food rdf:about="http://www.semanticweb.org/food#wine">
+    <time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >200</time>
+    <made_from rdf:resource="http://www.semanticweb.org/food#fruit"/>
+    <cooked rdf:resource="http://www.semanticweb.org/food#raw"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </food>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#Datatype">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#Container">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Container"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Container"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Container"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Container"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#Ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Resource>
+  <rdfs:Resource rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Resource>
+</rdf:RDF>
